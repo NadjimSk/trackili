@@ -1,0 +1,214 @@
+<!-- terms/delete-account.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Account — Trackili</title>
+
+    <link rel="stylesheet" href="../css/global.css" />
+
+    <style>
+        .legal {
+            max-width: 800px;
+            margin: 2rem auto 3rem;
+            padding: 0 1.5rem;
+            line-height: 1.75;
+            font-size: var(--fs-2);
+        }
+
+        .legal h1 {
+            margin-top: 6rem;
+            font-size: var(--fs-6);
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .legal h2 {
+            margin-top: 2.25rem;
+            font-size: var(--fs-4);
+            color: var(--primary);
+            margin-bottom: .75rem;
+        }
+
+        .legal ul,
+        .legal ol {
+            padding-left: 1.2rem;
+            margin: 0 0 1rem;
+        }
+
+        .legal strong {
+            color: #000;
+        }
+
+        .note {
+            margin-top: 1rem;
+            background-color: color-mix(in oklab, var(--primary) 12%, #f9f9f9);
+            padding: 1rem;
+            border-inline-start: 4px solid var(--primary);
+        }
+
+        .email-card {
+            margin-top: 1rem;
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid color-mix(in oklab, #000 12%, transparent);
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .email-card a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .legal .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .legal .row.centered {
+            justify-content: center;
+        }
+
+        .legal .row .text {
+            text-align: left;
+        }
+
+        .legal .row .image {
+            text-align: center;
+        }
+
+        .legal .row .image img {
+            max-width: 75%;
+            height: auto;
+            display: inline-block;
+        }
+
+        @media (min-width: 901px) {
+
+            .legal .row.centered .text,
+            .legal .row.centered .image {
+                flex: 0 1 360px;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .legal .row,
+            .legal .row.centered {
+                flex-direction: column;
+            }
+
+            .legal .row .image img {
+                max-width: 92%;
+            }
+        }
+
+        .legal .section-title.center {
+            margin-top: 6rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3T56F9HFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V3T56F9HFJ');
+    </script>
+</head>
+
+<body class="page-legal">
+
+    <div id="site-nav" role="navigation" aria-label="Main navigation"></div>
+
+    <main class="legal" role="main">
+        <h1>Delete Your Trackili Account</h1>
+        <p>If you no longer wish to use Trackili, you can permanently delete your account from within the app or by
+            contacting support.</p>
+
+        <!-- Section A: Can’t access the app -->
+        <h2>Can’t access the app?</h2>
+        <p>You can request account deletion by email. Please follow these steps so we can verify ownership quickly:</p>
+        <ol>
+            <li>Send an email to <strong><a href="mailto:support@trackili.app">support@trackili.app</a></strong>.</li>
+            <li>Use the <strong>same email address</strong> you used to register in the app.</li>
+            <li>Subject: <em>Delete my Trackili account</em>.</li>
+            <li>Optional: include any additional info that helps us verify (e.g., approximate signup date).</li>
+        </ol>
+
+        <p class="note">
+            Once verified, we will permanently delete your account and all associated data within <strong>48
+                hours</strong>.
+            This action is irreversible.
+        </p>
+
+        <!-- Section B: App deletion (title for whole section; centered layout) -->
+        <h2 class="section-title center">How to Delete Your Account from the App</h2>
+
+        <div class="row centered" aria-label="How to delete from the app">
+            <div class="text">
+                <p>
+                    You can delete your Trackili account directly from the app at any time.<br />
+                    Go to <strong>Menu</strong> → scroll to the bottom → tap <strong>Delete my Account</strong> →
+                    confirm the action.
+                </p>
+                <p class="note">
+                    Deleting your account will remove your profile and all related data from Trackili. We do not retain
+                    backups after deletion.
+                </p>
+            </div>
+
+            <div class="image">
+                <img src="../assets/delete-account-screenshot.webp"
+                    alt="App screen showing Delete Account button at the bottom of the menu" loading="lazy"
+                    decoding="async" />
+            </div>
+        </div>
+
+    </main>
+
+    <div id="site-footer" role="contentinfo"></div>
+    <script>
+        (async () => {
+            const [navRes, footerRes] = await Promise.all([
+                fetch('../partials/nav.html', { cache: 'no-cache' }),
+                fetch('../partials/footer.html', { cache: 'no-cache' })
+            ]);
+            document.getElementById('site-nav').innerHTML = await navRes.text();
+            document.getElementById('site-footer').innerHTML = await footerRes.text();
+
+            // سنة ©
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+
+            // إظهار النافبار
+            const navbar = document.querySelector('.navbar');
+            if (navbar) requestAnimationFrame(() => navbar.classList.add('visible'));
+
+            // تفعيل زر الهامبرغر
+            const btn = document.querySelector('.hamburger');
+            const links = document.querySelector('.nav-links');
+            if (btn && links) {
+                btn.addEventListener('click', () => {
+                    const open = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', String(!open));
+                    links.classList.toggle('open', !open);
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>

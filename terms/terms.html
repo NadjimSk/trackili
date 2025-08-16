@@ -1,0 +1,171 @@
+<!-- terms/terms.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Use — Trackili</title>
+    <link rel="stylesheet" href="../css/global.css" />
+
+    <style>
+        .legal {
+            max-width: 800px;
+            margin: 2rem auto 3rem;
+            padding: 0 1.5rem;
+            line-height: 1.75;
+            font-size: var(--fs-2);
+        }
+
+        .legal h1 {
+            margin-top: 6rem;
+            font-size: var(--fs-6);
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .legal h2 {
+            margin-top: 2.25rem;
+            font-size: var(--fs-4);
+            color: var(--primary);
+            margin-bottom: .75rem;
+        }
+
+        .legal ul {
+            padding-left: 1.2rem;
+            margin: 0 0 1rem;
+        }
+
+        .legal strong {
+            color: #000;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3T56F9HFJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V3T56F9HFJ');
+    </script>
+</head>
+
+
+<body class="page-legal">
+    <div id="site-nav" role="navigation" aria-label="Main navigation"></div>
+
+    <main class="legal" role="main">
+        <h1>Terms of Use</h1>
+
+        <p>Welcome to <strong>Trackili</strong>! These Terms of Service govern your use of the Trackili mobile
+            application and any related services.
+            By using the App, you agree to comply with these Terms and our Privacy Policy. Please read these Terms
+            carefully before using the App.</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <ul>
+            <li>By using the App, you <strong>agree to these Terms and the Privacy Policy</strong>.</li>
+            <li>If you do not agree to any part of these Terms, please stop using the App.</li>
+        </ul>
+
+        <h2>2. Description of the App</h2>
+        <ul>
+            <li><strong>Trackili</strong> is an independent application for parcel tracking and displaying deals from
+                AliExpress.</li>
+            <li>We are <strong>not official representatives</strong> of any shipping company or AliExpress.</li>
+            <li>All shipping and deal data is sourced from <strong>third-party APIs</strong>.</li>
+        </ul>
+
+        <h2>3. User Accounts</h2>
+        <ul>
+            <li>You may need to create an account to access certain features of the App.</li>
+            <li>You are responsible for <strong>maintaining the security of your account information</strong>, including
+                your password.</li>
+            <li>The information you provide must be <strong>accurate and up to date</strong>.</li>
+        </ul>
+
+        <h2>4. User Conduct</h2>
+        <ul>
+            <li>The App must be used <strong>for lawful and legitimate purposes only</strong>.</li>
+            <li>Any activity that <strong>disrupts, misuses, or attempts to hack the App</strong> is strictly
+                prohibited.</li>
+        </ul>
+
+        <h2>5. Intellectual Property</h2>
+        <ul>
+            <li>All content, software, and user interface elements are owned by <strong>Trackili</strong>.</li>
+            <li>You may not <strong>copy, reuse, or sell any part of the App</strong> without prior written consent.
+            </li>
+        </ul>
+
+        <h2>6. Data Accuracy and Limitation of Liability</h2>
+        <ul>
+            <li>We collect data from shipping companies and AliExpress <strong>as is</strong> and present it in a
+                simplified interface.</li>
+            <li>Data may contain <strong>errors or delays</strong> beyond our control.</li>
+            <li><strong>Trackili</strong> is not liable for any damages resulting from the use of displayed data.</li>
+        </ul>
+
+        <h2>7. External Links</h2>
+        <ul>
+            <li>The App may contain external links, such as to AliExpress products.</li>
+            <li>We are not responsible for the <strong>content or privacy policies</strong> of external sites.</li>
+        </ul>
+
+        <h2>8. Modifications to the App and Terms</h2>
+        <ul>
+            <li>We may <strong>update or modify these Terms</strong> or the App at any time.</li>
+            <li>It is your responsibility to review changes periodically.</li>
+            <li>Continued use of the App implies <strong>acceptance of the changes</strong>.</li>
+        </ul>
+
+        <h2>9. Governing Law</h2>
+        <ul>
+            <li>These Terms are governed by the laws of <strong>your country of residence</strong>.</li>
+            <li>Any disputes will be resolved under those laws.</li>
+        </ul>
+
+        <h2>10. Terms Updates</h2>
+        <ul>
+            <li>We may update these Terms at any time.</li>
+            <li>Changes take effect immediately upon publication in the app.</li>
+            <li>Continued use of the app means you agree to the updated terms.</li>
+        </ul>
+
+        <p><strong>By using the App, you acknowledge that you have read, understood, and agreed to these Terms of
+                Use.</strong></p>
+    </main>
+
+    <div id="site-footer" role="contentinfo"></div>
+
+    <script>
+        (async () => {
+            const [navRes, footerRes] = await Promise.all([
+                fetch('../partials/nav.html', { cache: 'no-cache' }),
+                fetch('../partials/footer.html', { cache: 'no-cache' })
+            ]);
+            document.getElementById('site-nav').innerHTML = await navRes.text();
+            document.getElementById('site-footer').innerHTML = await footerRes.text();
+
+            const y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+
+            const navbar = document.querySelector('.navbar');
+            if (navbar) requestAnimationFrame(() => navbar.classList.add('visible'));
+
+            const btn = document.querySelector('.hamburger');
+            const links = document.querySelector('.nav-links');
+            if (btn && links) {
+                btn.addEventListener('click', () => {
+                    const open = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', String(!open));
+                    links.classList.toggle('open', !open);
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
