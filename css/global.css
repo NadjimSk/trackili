@@ -222,59 +222,51 @@ body {
     gap: .75rem;
   }
 
-  .nav-links {
+  .navbar .nav-links {
+    display: none;
     position: fixed;
     top: var(--nav-h);
     left: 0;
     right: 0;
-    background: #fff;
+    background: var(--bg);
     flex-direction: column;
     align-items: flex-start;
     padding: .9rem 1.25rem;
-    transform: translateY(-120%);
+    transform: translateY(-8px);
     opacity: 0;
     pointer-events: none;
     border-bottom: 1px solid rgba(0, 0, 0, .06);
-    transition: transform .35s ease, opacity .35s ease;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    transition: opacity .25s ease;
+    z-index: 998;
   }
 
-  .nav-links.open {
-    transform: translateY(0);
+  .navbar .nav-links.open {
+    display: flex;
     opacity: 1;
     pointer-events: auto;
   }
 
-  .nav-links a {
-    padding: .45rem 0;
+  .navbar .nav-links a {
+    padding: .5rem 0;
     font-size: 1rem;
   }
 
-  .social-icons {
+  .navbar .social-icons {
+    display: none;
+  }
+
+  .navbar.is-open .social-icons {
+    display: flex;
     position: fixed;
     top: calc(var(--nav-h) - 2px);
     right: .9rem;
     gap: .5rem;
+    z-index: 999;
   }
 }
 
-.nav-links a:focus-visible,
-.social-icons a:focus-visible,
-.hamburger:focus-visible {
-  outline: 2px solid color-mix(in oklab, var(--primary) 60%, transparent);
-  outline-offset: 3px;
-  border-radius: 8px;
-}
 
-@media (prefers-reduced-motion: reduce) {
-
-  .navbar,
-  .nav-links,
-  .brand img,
-  .nav-links a,
-  .social-icons a {
-    transition: none !important;
-  }
-}
 
 /* =========================
    3) Hero
@@ -362,10 +354,14 @@ body {
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    place-items: center;
   }
 
   .hero-visual {
     margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .hero p.sub {
@@ -373,10 +369,14 @@ body {
   }
 
   .hero-visual img {
-    width: 100%;
-    transform: none;
+    width: clamp(240px, 72vw, 420px);
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    transform: none !important;
   }
 }
+
 
 /* Hero Waves */
 .hero-wave,
@@ -404,32 +404,27 @@ body {
    4) Gallery
 ========================= */
 
-/* القسم العام */
 .gallery {
   padding: var(--space-6) 0;
 }
 
-/* شبكة الصور */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: var(--space-4);
 }
 
-/* الصور داخل <picture> */
 .gallery-grid picture {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.6s ease-in-out;
 }
 
-/* عندما تدخل الصورة إلى نطاق الرؤية */
 .gallery-grid picture.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* الصورة نفسها */
 .gallery-grid img {
   width: 100%;
   border-radius: var(--radius);
@@ -437,7 +432,6 @@ body {
   transition: transform 0.4s ease;
 }
 
-/* تكبير أكبر عند التحويم */
 .gallery-grid img:hover {
   transform: scale(1.12);
 }
@@ -501,8 +495,6 @@ body {
 .feature.reverse {
   grid-template-columns: 1fr 1fr;
 }
-
-/* التبديل عبر HTML */
 
 .feature .visual {
   display: flex;
@@ -618,7 +610,6 @@ body {
   margin-bottom: var(--space-5);
 }
 
-/* زر متجر جوجل (متمركز) */
 .centered-badge {
   display: flex;
   justify-content: center;
@@ -643,7 +634,6 @@ body {
   transform: scale(1.05);
 }
 
-/* App Store (معطّل) */
 .play-badge.disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -664,7 +654,6 @@ body {
   max-width: 1280px;
   margin-inline: auto;
   padding: 22px 20px;
-  /* خفيف */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -672,14 +661,12 @@ body {
   flex-wrap: wrap;
 }
 
-/* روابط الفوتر */
 .footer-links {
   display: flex;
   align-items: center;
   gap: .9rem;
   flex-wrap: wrap;
   font-size: .95rem;
-  /* واضح وغير Bold */
   letter-spacing: .015em;
 }
 
@@ -696,14 +683,12 @@ body {
   transform: translateY(-1px);
 }
 
-/* نقطة فاصلة أنيقة بين الروابط */
 .footer-links a+a::before {
   content: "·";
   margin-inline: .35rem .55rem;
   color: color-mix(in oklab, var(--text) 45%, transparent);
 }
 
-/* أيقونات السوشيال في الفوتر (مستقلة عن هيدر) */
 .site-footer .social-icons {
   display: flex;
   align-items: center;
@@ -732,17 +717,14 @@ body {
 .site-footer .social-icons img {
   width: 16px;
   height: 16px;
-  /* صغيرة وواضحة */
   display: block;
 }
 
-/* الشريط السفلي لحقوق النشر */
 .footer-bottom {
   border-top: 1px dashed color-mix(in oklab, #000 7%, transparent);
   padding: 12px 16px;
   display: grid;
   place-items: center;
-  /* وسط أفقي/عمودي */
   background: color-mix(in oklab, var(--bg) 96%, transparent);
 }
 
@@ -768,7 +750,6 @@ body {
   }
 }
 
-/* تقليل الحركة */
 @media (prefers-reduced-motion: reduce) {
 
   .footer-links a,
