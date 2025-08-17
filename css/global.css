@@ -349,11 +349,6 @@ body {
   transform: translateX(-100px);
 }
 
-.hero-visual img {
-  transform: none !important;
-}
-
-
 /* Mobile Layout */
 @media (max-width: 768px) {
   .hero-grid {
@@ -805,14 +800,4 @@ body {
 .slide-right.in {
   opacity: 1;
   transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .reveal,
-  .slide-right {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
 }
