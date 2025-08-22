@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy — Trackili</title>
     <meta name="description"
-        content="Trackili Privacy Policy - Learn how we collect, use, and protect your data when using our services." />
+        content="Trackili Privacy Policy — How we collect, use, and protect your data. Last updated: 22 August 2025." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Prevent indexing of legal pages -->
+    <meta name="robots" content="noindex, nofollow" />
 
     <link rel="stylesheet" href="../css/global.css" />
 
@@ -42,6 +46,18 @@
         .legal strong {
             color: #000;
         }
+
+        .last-updated {
+            margin: .25rem 0 1.25rem;
+            color: #555;
+            font-size: .95em;
+        }
+
+        .divider {
+            border: 0;
+            border-top: 1px solid #e5e7eb;
+            margin: 1.25rem 0;
+        }
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -50,60 +66,225 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-V3T56F9HFJ');
     </script>
 </head>
-
 
 <body class="page-legal">
     <div id="site-nav" role="navigation" aria-label="Main navigation"></div>
 
     <main class="legal" role="main">
-        <h1>Privacy Policy</h1>
-        <p>At <strong>Trackili</strong>, we value and prioritize your privacy. This policy explains
-            <strong>how we collect, use, and protect your personal information</strong> when you use our application.
-        </p>
+        <h1>Privacy Policy — Trackili</h1>
+        <p class="last-updated">Last updated: <time datetime="2025-08-22">22 August 2025</time></p>
 
-        <h2>1. Information We Collect</h2>
-        <ul>
-            <li><strong>Account Information</strong>: Such as the email address you use to register.</li>
-            <li><strong>Tracking Data</strong>: Tracking numbers you add to the application.</li>
-            <li><strong>Device Data</strong>: Device type and operating system version for performance analysis.</li>
-        </ul>
+        <section id="intro">
+            <p>At <strong>Trackili</strong>, we value and prioritize your privacy. This policy explains
+                <strong>how we collect, use, and protect your personal information</strong> when you use our application
+                and website.
+            </p>
+        </section>
 
-        <h2>2. How We Use Your Information</h2>
-        <ul>
-            <li>To enhance user experience and provide better services.</li>
-            <li>To operate tracking features and display parcel information accurately.</li>
-            <li>For analytical purposes such as measuring app performance and fixing errors.</li>
-        </ul>
+        <section id="who-we-are">
+            <h2>1) Who we are &amp; scope</h2>
+            <p><strong>Data Controller:</strong> Trackili (individual developer).<br />
+                <strong>Contact for privacy requests:</strong> <a
+                    href="mailto:contact@trackili.app">contact@trackili.app</a>
+            </p>
+            <p>This policy applies to the Trackili app and website. We collect the minimum data needed to provide the
+                service, we are transparent about how we use it, and we do not sell your personal data.</p>
+            <hr class="divider" />
+        </section>
 
-        <h2>3. Sharing Information</h2>
-        <ul>
-            <li>We do not sell or trade your personal information.</li>
-            <li>We may share non-personal data with analytics service providers such as Firebase and Google Analytics to
-                improve performance.</li>
-        </ul>
+        <section id="what-we-collect">
+            <h2>2) What we collect and why (and the legal basis)</h2>
+            <ul>
+                <li><strong>Account data:</strong> your email and (optionally) display name, plus your Firebase user
+                    ID.<br />
+                    <em>Purpose:</em> create and manage your account, sign-in, support communications and confirming
+                    sensitive requests (e.g., account deletion).<br />
+                    <em>Legal basis:</em> Contract performance (Art. 6(1)(b)).
+                </li>
 
-        <h2>4. Security</h2>
-        <p>We take appropriate measures to protect your data. However,
-            <strong>no method of transmission over the Internet is 100% secure</strong>, so we cannot guarantee absolute
-            security.
-        </p>
+                <li><strong>Parcel tracking numbers:</strong> the numbers you add to see shipment status and
+                    updates.<br />
+                    <em>Purpose:</em> fetch and show your shipment status, and help you restore your list when changing
+                    devices.<br />
+                    <em>Legal basis:</em> Contract performance.
+                </li>
 
-        <h2>5. External Links</h2>
-        <p>The app may contain links to external sites (e.g., AliExpress). We are not responsible for the privacy
-            policies of those external sites.</p>
+                <li><strong>User preferences:</strong> language, notification settings, country/currency to display
+                    AliExpress prices for your region.<br />
+                    <em>Purpose:</em> customize your experience.<br />
+                    <em>Legal basis:</em> Contract performance / Legitimate interests (Art. 6(1)(f)), as applicable.
+                </li>
 
-        <h2>6. Policy Updates</h2>
-        <p>We reserve the right to update or modify this privacy policy at any time. Any changes become effective
-            immediately upon being published in the app. Continuing to use the app after any changes means you agree to
-            the updated policy.</p>
+                <li><strong>Diagnostics &amp; performance (Crashlytics and Analytics):</strong> technical information
+                    like Android version, device model, app version, crash logs, and some aggregated usage
+                    metrics.<br />
+                    <em>Purpose:</em> fix issues, improve stability, security, and quality. We do not use this for
+                    behavioral advertising and we do not collect precise location.<br />
+                    <em>Legal basis:</em> Legitimate interests (Art. 6(1)(f)). We do not currently provide an in-app
+                    toggle; you may object by contacting us and we will honor your request as far as practicable.
+                </li>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions about this privacy policy, you can contact us via email:</p>
-        <p><strong>support@trackili.app</strong></p>
+                <li><strong>Push notification tokens (FCM):</strong><br />
+                    <em>Purpose:</em> send the notifications you enable (parcel progress / deals).<br />
+                    <em>Legal basis:</em> Consent (withdrawable at any time in the app or device settings).
+                </li>
+
+                <li><strong>Support communications:</strong> content of your messages and your contact details.<br />
+                    <em>Purpose:</em> respond and improve the service.<br />
+                    <em>Legal basis:</em> Contract performance / Legitimate interests.
+                </li>
+            </ul>
+            <p><strong>We do NOT collect:</strong> full legal name, postal address, phone number, payment information,
+                precise location, or access to camera/microphone/contacts for tracking purposes.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="how-we-use">
+            <h2>3) How we use your data</h2>
+            <ul>
+                <li>Operate your account and sign you in.</li>
+                <li>Save and display the tracking numbers you add and retrieve the latest statuses.</li>
+                <li>Send the notifications you enabled (you can turn them off any time).</li>
+                <li>Diagnose crashes and improve performance (no behavioral ad targeting).</li>
+                <li>Show affiliate banners/links to external products; clicking them takes you to the third party’s
+                    policies.</li>
+            </ul>
+            <p>We do not make automated decisions that produce legal effects concerning you.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="sharing">
+            <h2>4) Sharing with trusted parties (processors/recipients)</h2>
+            <ul>
+                <li><strong>Google Firebase:</strong> Authentication (Auth), Cloud Messaging (FCM), Crashlytics and
+                    Analytics. We share the minimum necessary to run these features.</li>
+                <li><strong>Shipment information providers:</strong> we only send the tracking number to retrieve the
+                    shipment status.</li>
+                <li><strong>Price/deals providers (e.g., AliExpress APIs):</strong> we use product identifiers to fetch
+                    details/prices.</li>
+            </ul>
+            <p><strong>We do not sell your data</strong> and we do not share it for behavioral advertising.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="ads">
+            <h2>5) Ads &amp; affiliate links</h2>
+            <p>Trackili may display affiliate links/banners. We may earn a commission if you purchase via those links
+                <strong>at no extra cost to you</strong>. Prices/availability are determined by the third party; please
+                review their policies and terms before purchasing.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="retention">
+            <h2>6) Retention &amp; deletion</h2>
+            <ul>
+                <li><strong>Account, tracking numbers, preferences, and FCM token:</strong> kept while your account is
+                    active and deleted immediately when you delete your account or request deletion.</li>
+                <li><strong>Support messages:</strong> up to <strong>12 months</strong> from your last contact (or
+                    deleted upon request).</li>
+                <li><strong>Crashlytics/Analytics:</strong> crash data and metrics for an operationally necessary period
+                    (e.g., <strong>90–180 days</strong> for Crashlytics, and up to <strong>14 months</strong> for
+                    aggregated metrics where applicable).</li>
+                <li><strong>Automated backups (if any):</strong> removed as part of the deletion cycle and not used to
+                    restore individually deleted data.</li>
+            </ul>
+            <p><strong>Account &amp; data deletion:</strong><br />
+                In-app: <em>Settings → Delete Account</em> (immediate deletion from our operational systems).<br />
+                On the web (alternative): <a href="delete-account.html" rel="noopener">/terms/delete-account.html</a>
+            </p>
+            <hr class="divider" />
+        </section>
+
+        <section id="controls">
+            <h2>7) Your choices &amp; controls</h2>
+            <ul>
+                <li><strong>Notifications:</strong> turn parcel/deal notifications on/off in the app or in your device
+                    settings.</li>
+                <li><strong>Crashlytics/Analytics:</strong> used under legitimate interests to improve quality. <em>No
+                        in-app toggle currently</em>; you can <strong>object</strong> by contacting us and we will honor
+                    your request as far as practicable.</li>
+                <li><strong>Manage your data:</strong> you can add/edit/delete tracking numbers and update your display
+                    name in the app.</li>
+            </ul>
+            <hr class="divider" />
+        </section>
+
+        <section id="rights">
+            <h2>8) Your rights (especially in the EEA/UK)</h2>
+            <p>Depending on your local law, you may have rights to <strong>access</strong>, <strong>rectify</strong>,
+                <strong>erase</strong>, <strong>restrict</strong>, <strong>object</strong> (especially to processing
+                based on legitimate interests), <strong>portability</strong>, and <strong>withdraw consent</strong>
+                without affecting the lawfulness of prior processing.</p>
+            <p><strong>How to exercise:</strong> email <a href="mailto:contact@trackili.app">contact@trackili.app</a>
+                and we will respond within <strong>30 days</strong>. You also have the right to lodge a complaint with
+                your <strong>data protection authority</strong>.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="security">
+            <h2>9) Security</h2>
+            <p>We apply appropriate technical and organizational measures (e.g., TLS in transit, least-privilege access
+                controls, internal error reviews). No method is 100% secure, and we will provide notices as required by
+                law in case of a relevant incident.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="transfers">
+            <h2>10) International transfers</h2>
+            <p>Your data may be processed outside the EEA (e.g., via Firebase). Where applicable, we rely on
+                <strong>Standard Contractual Clauses (SCCs)</strong> and appropriate safeguards.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="children">
+            <h2>11) Children</h2>
+            <p>The service is not directed to children under <strong>16</strong> in the EEA (or under the local legal
+                age elsewhere). If we learn we collected a child’s data unintentionally, we will delete it upon notice.
+            </p>
+            <hr class="divider" />
+        </section>
+
+        <section id="cookies">
+            <h2>12) Cookies (website)</h2>
+            <p>Our website may use essential cookies (e.g., language/security). We do not use behavioral advertising
+                cookies. If we add web analytics in the EEA, we will update this policy accordingly.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="links">
+            <h2>13) External links</h2>
+            <p>When you navigate to shipping companies or stores, their own policies and terms apply. Please review them
+                before sharing any information.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="disclaimer">
+            <h2>14) Disclaimer (important)</h2>
+            <p>We are not a shipping company and we do not generate tracking data; we display it as provided by external
+                services. Updates may be delayed or differ across systems. For shipment issues, please contact your
+                carrier directly.</p>
+            <p>For AliExpress data: we display prices/deals as received from external providers and they may not always
+                be accurate; <strong>verify the final price and seller terms on the store before purchasing</strong>. We
+                are not responsible for purchase decisions based on outdated information.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="changes">
+            <h2>15) Changes to this policy</h2>
+            <p>We may update this policy. We will show the “Last updated” date at the top and may send an in-app notice
+                for material changes. Your continued use of Trackili means you accept the updated version.</p>
+            <hr class="divider" />
+        </section>
+
+        <section id="contact">
+            <h2>16) Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:contact@trackili.app">contact@trackili.app</a><br />
+                <strong>Policy page:</strong> /terms/privacy.html
+            </p>
+        </section>
     </main>
 
     <div id="site-footer" role="contentinfo"></div>
