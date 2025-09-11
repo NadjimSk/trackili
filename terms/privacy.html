@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy — Trackili</title>
     <meta name="description"
-        content="Trackili Privacy Policy — How we collect, use, and protect your data. Last updated: 22 August 2025." />
-    <meta name="robots" content="noindex, nofollow" />
-
+        content="Trackili Privacy Policy — How we collect, use, and protect your data. Last updated: 10 September 2025." />
     <!-- Prevent indexing of legal pages -->
     <meta name="robots" content="noindex, nofollow" />
 
@@ -36,6 +34,13 @@
             font-size: var(--fs-4);
             color: var(--primary);
             margin-bottom: .75rem;
+        }
+
+        .legal h3 {
+            margin-top: 1.25rem;
+            font-size: var(--fs-3);
+            color: #111827;
+            margin-bottom: .5rem;
         }
 
         .legal ul {
@@ -75,14 +80,7 @@
 
     <main class="legal" role="main">
         <h1>Privacy Policy — Trackili</h1>
-        <p class="last-updated">Last updated: <time datetime="2025-08-22">22 August 2025</time></p>
-
-        <section id="intro">
-            <p>At <strong>Trackili</strong>, we value and prioritize your privacy. This policy explains
-                <strong>how we collect, use, and protect your personal information</strong> when you use our application
-                and website.
-            </p>
-        </section>
+        <p class="last-updated">Last updated: <time datetime="2025-09-10">10 September 2025</time></p>
 
         <section id="who-we-are">
             <h2>1) Who we are &amp; scope</h2>
@@ -98,9 +96,11 @@
         <section id="what-we-collect">
             <h2>2) What we collect and why (and the legal basis)</h2>
             <ul>
-                <li><strong>Account data:</strong> your email and (optionally) display name, plus your Firebase user
-                    ID.<br />
-                    <em>Purpose:</em> create and manage your account, sign-in, support communications and confirming
+                <li><strong>Account data:</strong> your email and (optionally) display name, plus your Firebase user ID
+                    and
+                    session tokens (JWT) used to authenticate requests.<br />
+                    <em>Purpose:</em> create and manage your account, sign-in, secure your session, support
+                    communications and confirm
                     sensitive requests (e.g., account deletion).<br />
                     <em>Legal basis:</em> Contract performance (Art. 6(1)(b)).
                 </li>
@@ -112,31 +112,44 @@
                     <em>Legal basis:</em> Contract performance.
                 </li>
 
-                <li><strong>User preferences:</strong> language, notification settings, country/currency to display
-                    AliExpress prices for your region.<br />
+                <li><strong>User preferences:</strong> language, notification settings (opt-in/opt-out),
+                    country/currency to
+                    display AliExpress prices for your region.<br />
                     <em>Purpose:</em> customize your experience.<br />
                     <em>Legal basis:</em> Contract performance / Legitimate interests (Art. 6(1)(f)), as applicable.
                 </li>
 
                 <li><strong>Diagnostics &amp; performance (Crashlytics and Analytics):</strong> technical information
-                    like Android version, device model, app version, crash logs, and some aggregated usage
-                    metrics.<br />
+                    like
+                    Android version, device model, app version, crash logs, and some aggregated usage metrics.<br />
                     <em>Purpose:</em> fix issues, improve stability, security, and quality. We do not use this for
-                    behavioral advertising and we do not collect precise location.<br />
+                    behavioral
+                    advertising and we do not collect precise location.<br />
                     <em>Legal basis:</em> Legitimate interests (Art. 6(1)(f)). We do not currently provide an in-app
-                    toggle; you may object by contacting us and we will honor your request as far as practicable.
+                    toggle; you may
+                    object by contacting us and we will honor your request as far as practicable.
                 </li>
 
                 <li><strong>Push notification tokens (FCM):</strong><br />
                     <em>Purpose:</em> send the notifications you enable (parcel progress / deals).<br />
-                    <em>Legal basis:</em> Consent (withdrawable at any time in the app or device settings).
+                    <em>Legal basis:</em> Consent (withdrawable at any time in the app or device settings).<br />
+                    <em>Your control:</em> You can withdraw consent at any time from the in-app settings or your device
+                    settings.
+                    We will stop sending notifications and <strong>delete your FCM token</strong> when you disable
+                    notifications
+                    or delete your account.
                 </li>
+
+                <li><strong>Advertising identifiers:</strong> We <strong>do not use</strong> the Android Advertising ID,
+                    and we do
+                    not link it to FCM or other features.</li>
 
                 <li><strong>Support communications:</strong> content of your messages and your contact details.<br />
                     <em>Purpose:</em> respond and improve the service.<br />
                     <em>Legal basis:</em> Contract performance / Legitimate interests.
                 </li>
             </ul>
+
             <p><strong>We do NOT collect:</strong> full legal name, postal address, phone number, payment information,
                 precise location, or access to camera/microphone/contacts for tracking purposes.</p>
             <hr class="divider" />
@@ -147,7 +160,9 @@
             <ul>
                 <li>Operate your account and sign you in.</li>
                 <li>Save and display the tracking numbers you add and retrieve the latest statuses.</li>
-                <li>Send the notifications you enabled (you can turn them off any time).</li>
+                <li>Send the notifications you enabled (you can turn them off any time; the FCM token is deleted when
+                    you disable
+                    notifications or delete your account).</li>
                 <li>Diagnose crashes and improve performance (no behavioral ad targeting).</li>
                 <li>Show affiliate banners/links to external products; clicking them takes you to the third party’s
                     policies.</li>
@@ -160,7 +175,8 @@
             <h2>4) Sharing with trusted parties (processors/recipients)</h2>
             <ul>
                 <li><strong>Google Firebase:</strong> Authentication (Auth), Cloud Messaging (FCM), Crashlytics and
-                    Analytics. We share the minimum necessary to run these features.</li>
+                    Analytics.
+                    We share the minimum necessary to run these features.</li>
                 <li><strong>Shipment information providers:</strong> we only send the tracking number to retrieve the
                     shipment status.</li>
                 <li><strong>Price/deals providers (e.g., AliExpress APIs):</strong> we use product identifiers to fetch
@@ -174,7 +190,9 @@
             <h2>5) Ads &amp; affiliate links</h2>
             <p>Trackili may display affiliate links/banners. We may earn a commission if you purchase via those links
                 <strong>at no extra cost to you</strong>. Prices/availability are determined by the third party; please
-                review their policies and terms before purchasing.</p>
+                review
+                their policies and terms before purchasing.
+            </p>
             <hr class="divider" />
         </section>
 
@@ -182,18 +200,22 @@
             <h2>6) Retention &amp; deletion</h2>
             <ul>
                 <li><strong>Account, tracking numbers, preferences, and FCM token:</strong> kept while your account is
-                    active and deleted immediately when you delete your account or request deletion.</li>
+                    active
+                    and deleted immediately when you delete your account or request deletion.</li>
                 <li><strong>Support messages:</strong> up to <strong>12 months</strong> from your last contact (or
                     deleted upon request).</li>
                 <li><strong>Crashlytics/Analytics:</strong> crash data and metrics for an operationally necessary period
                     (e.g., <strong>90–180 days</strong> for Crashlytics, and up to <strong>14 months</strong> for
-                    aggregated metrics where applicable).</li>
+                    aggregated metrics
+                    where applicable).</li>
                 <li><strong>Automated backups (if any):</strong> removed as part of the deletion cycle and not used to
-                    restore individually deleted data.</li>
+                    restore
+                    individually deleted data.</li>
             </ul>
             <p><strong>Account &amp; data deletion:</strong><br />
                 In-app: <em>Settings → Delete Account</em> (immediate deletion from our operational systems).<br />
-                On the web (alternative): <a href="delete-account.html" rel="noopener">/terms/delete-account.html</a>
+                On the web (alternative): <a href="https://www.trackili.app/terms/delete-account.html"
+                    rel="noopener">https://www.trackili.app/terms/delete-account.html</a>
             </p>
             <hr class="divider" />
         </section>
@@ -202,12 +224,16 @@
             <h2>7) Your choices &amp; controls</h2>
             <ul>
                 <li><strong>Notifications:</strong> turn parcel/deal notifications on/off in the app or in your device
-                    settings.</li>
-                <li><strong>Crashlytics/Analytics:</strong> used under legitimate interests to improve quality. <em>No
-                        in-app toggle currently</em>; you can <strong>object</strong> by contacting us and we will honor
-                    your request as far as practicable.</li>
+                    settings
+                    (<strong>we delete the FCM token when you disable notifications</strong>).</li>
+                <li><strong>Crashlytics/Analytics:</strong> used under legitimate interests to improve quality.
+                    <em>No in-app toggle currently</em>; you can <strong>object</strong> by contacting us and we will
+                    honor your
+                    request as far as practicable.
+                </li>
                 <li><strong>Manage your data:</strong> you can add/edit/delete tracking numbers and update your display
-                    name in the app.</li>
+                    name
+                    in the app.</li>
             </ul>
             <hr class="divider" />
         </section>
@@ -216,74 +242,136 @@
             <h2>8) Your rights (especially in the EEA/UK)</h2>
             <p>Depending on your local law, you may have rights to <strong>access</strong>, <strong>rectify</strong>,
                 <strong>erase</strong>, <strong>restrict</strong>, <strong>object</strong> (especially to processing
-                based on legitimate interests), <strong>portability</strong>, and <strong>withdraw consent</strong>
-                without affecting the lawfulness of prior processing.</p>
+                based on
+                legitimate interests), <strong>portability</strong>, and <strong>withdraw consent</strong> without
+                affecting the
+                lawfulness of prior processing.
+            </p>
             <p><strong>How to exercise:</strong> email <a href="mailto:contact@trackili.app">contact@trackili.app</a>
                 and we will respond within <strong>30 days</strong>. You also have the right to lodge a complaint with
-                your <strong>data protection authority</strong>.</p>
+                your
+                <strong>data protection authority</strong>.
+            </p>
             <hr class="divider" />
         </section>
 
         <section id="security">
             <h2>9) Security</h2>
             <p>We apply appropriate technical and organizational measures (e.g., TLS in transit, least-privilege access
-                controls, internal error reviews). No method is 100% secure, and we will provide notices as required by
-                law in case of a relevant incident.</p>
+                controls,
+                internal error reviews). No method is 100% secure, and we will provide notices as required by law in
+                case of a
+                relevant incident.</p>
             <hr class="divider" />
         </section>
 
         <section id="transfers">
             <h2>10) International transfers</h2>
             <p>Your data may be processed outside the EEA (e.g., via Firebase). Where applicable, we rely on
-                <strong>Standard Contractual Clauses (SCCs)</strong> and appropriate safeguards.</p>
+                <strong>Standard Contractual Clauses (SCCs)</strong> and appropriate safeguards.
+            </p>
             <hr class="divider" />
         </section>
 
         <section id="children">
             <h2>11) Children</h2>
-            <p>The service is not directed to children under <strong>16</strong> in the EEA (or under the local legal
-                age elsewhere). If we learn we collected a child’s data unintentionally, we will delete it upon notice.
-            </p>
+            <p>The service is <strong>not directed to children under 13</strong>, or below the <strong>local age of
+                    consent for
+                    online services</strong> (up to <strong>16</strong> in some countries). If we learn we collected a
+                child’s data
+                unintentionally, we will delete it upon notice.</p>
             <hr class="divider" />
         </section>
 
         <section id="cookies">
             <h2>12) Cookies (website)</h2>
             <p>Our website may use essential cookies (e.g., language/security). We do not use behavioral advertising
-                cookies. If we add web analytics in the EEA, we will update this policy accordingly.</p>
+                cookies.
+                If we add web analytics in the EEA, we will update this policy accordingly.</p>
             <hr class="divider" />
         </section>
 
         <section id="links">
             <h2>13) External links</h2>
             <p>When you navigate to shipping companies or stores, their own policies and terms apply. Please review them
-                before sharing any information.</p>
+                before
+                sharing any information.</p>
             <hr class="divider" />
         </section>
 
         <section id="disclaimer">
             <h2>14) Disclaimer (important)</h2>
             <p>We are not a shipping company and we do not generate tracking data; we display it as provided by external
-                services. Updates may be delayed or differ across systems. For shipment issues, please contact your
-                carrier directly.</p>
+                services.
+                Updates may be delayed or differ across systems. For shipment issues, please contact your carrier
+                directly.</p>
             <p>For AliExpress data: we display prices/deals as received from external providers and they may not always
-                be accurate; <strong>verify the final price and seller terms on the store before purchasing</strong>. We
-                are not responsible for purchase decisions based on outdated information.</p>
+                be accurate;
+                <strong>verify the final price and seller terms on the store before purchasing</strong>. We are not
+                responsible for
+                purchase decisions based on outdated information.
+            </p>
             <hr class="divider" />
         </section>
 
         <section id="changes">
             <h2>15) Changes to this policy</h2>
             <p>We may update this policy. We will show the “Last updated” date at the top and may send an in-app notice
-                for material changes. Your continued use of Trackili means you accept the updated version.</p>
+                for
+                material changes. Your continued use of Trackili means you accept the updated version.</p>
             <hr class="divider" />
         </section>
 
         <section id="contact">
             <h2>16) Contact</h2>
             <p><strong>Email:</strong> <a href="mailto:contact@trackili.app">contact@trackili.app</a><br />
-                <strong>Policy page:</strong> /terms/privacy.html
+                <strong>Policy page:</strong> <a href="https://www.trackili.app/terms/privacy.html"
+                    rel="noopener">https://www.trackili.app/terms/privacy.html</a>
             </p>
+            <hr class="divider" />
+        </section>
+
+        <section id="appendix">
+            <h2>Appendix — Google Play Data Safety summary (for transparency)</h2>
+
+            <h3>Data collected:</h3>
+            <ul>
+                <li><strong>Personal info:</strong> email (optional), display name (optional), Firebase UID.</li>
+                <li><strong>App activity / app info and performance:</strong> crash logs, diagnostics, and basic usage
+                    metrics
+                    (no precise location).</li>
+                <li><strong>Device or other IDs:</strong> <strong>FCM token</strong> (for notifications).</li>
+                <li><strong>User content:</strong> parcel tracking numbers you add.</li>
+                <li><strong>Preferences:</strong> language, country/currency, notification opt-in.</li>
+            </ul>
+
+            <h3>Purposes:</h3>
+            <ul>
+                <li><strong>App functionality:</strong> account, parcel tracking, preferences.</li>
+                <li><strong>Notifications:</strong> only if enabled (consent).</li>
+                <li><strong>Analytics/diagnostics &amp; performance:</strong> improve stability and quality (legitimate
+                    interests).</li>
+                <li><strong>Developer communications:</strong> support and responding to your requests.</li>
+            </ul>
+
+            <h3>Data sharing &amp; selling:</h3>
+            <ul>
+                <li>Shared only with <strong>processors</strong> necessary to provide the service (Firebase;
+                    shipment/price providers).</li>
+                <li><strong>Not sold</strong> and <strong>not used for behavioral advertising</strong>.</li>
+            </ul>
+
+            <h3>Security:</h3>
+            <ul>
+                <li>Encrypted in transit (TLS). Access controlled internally. Invalid FCM tokens are removed.</li>
+            </ul>
+
+            <h3>User control &amp; deletion:</h3>
+            <ul>
+                <li>Disable notifications in app/device settings (<strong>FCM token deleted</strong>).</li>
+                <li>Delete account in-app; data removed from operational systems and scheduled for removal from backups.
+                </li>
+            </ul>
         </section>
     </main>
 
