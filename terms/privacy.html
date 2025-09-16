@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy — Trackili</title>
     <meta name="description"
-        content="Trackili Privacy Policy — How we collect, use, and protect your data. Last updated: 10 September 2025." />
+        content="Trackili Privacy Policy — How we collect, use, and protect your data. Last updated: 16 September 2025." />
     <!-- Prevent indexing of legal pages -->
     <meta name="robots" content="noindex, nofollow" />
 
@@ -80,13 +80,13 @@
 
     <main class="legal" role="main">
         <h1>Privacy Policy — Trackili</h1>
-        <p class="last-updated">Last updated: <time datetime="2025-09-10">10 September 2025</time></p>
+        <p class="last-updated">Last updated: <time datetime="2025-09-16">16 September 2025</time></p>
 
         <section id="who-we-are">
             <h2>1) Who we are &amp; scope</h2>
             <p><strong>Data Controller:</strong> Trackili (individual developer).<br />
-                <strong>Contact for privacy requests:</strong> <a
-                    href="mailto:contact@trackili.app">contact@trackili.app</a>
+                <strong>Contact for any requests:</strong> <a
+                    href="mailto:support@trackili.app">support@trackili.app</a>
             </p>
             <p>This policy applies to the Trackili app and website. We collect the minimum data needed to provide the
                 service, we are transparent about how we use it, and we do not sell your personal data.</p>
@@ -95,236 +95,507 @@
 
         <section id="what-we-collect">
             <h2>2) What we collect and why (and the legal basis)</h2>
-            <ul>
-                <li><strong>Account data:</strong> your email and (optionally) display name, plus your Firebase user ID
-                    and
-                    session tokens (JWT) used to authenticate requests.<br />
-                    <em>Purpose:</em> create and manage your account, sign-in, secure your session, support
-                    communications and confirm
-                    sensitive requests (e.g., account deletion).<br />
-                    <em>Legal basis:</em> Contract performance (Art. 6(1)(b)).
-                </li>
 
-                <li><strong>Parcel tracking numbers:</strong> the numbers you add to see shipment status and
-                    updates.<br />
-                    <em>Purpose:</em> fetch and show your shipment status, and help you restore your list when changing
-                    devices.<br />
-                    <em>Legal basis:</em> Contract performance.
-                </li>
+            <p><strong>Account data (required):</strong> your <strong>email</strong> (required for sign-up and sign-in),
+                your <strong>Firebase user ID (UID)</strong>, a <strong>display name/username</strong> (required — you
+                can choose any name), and
+                <strong>session tokens (JWT)</strong> used to authenticate requests.<br />
+                If you sign in with <strong>Google</strong>, we also receive your <strong>Google display name</strong>
+                and
+                <strong>profile photo URL</strong> to populate your in-app profile (we do not modify your Google
+                account).<br />
+                <em>Purpose:</em> create and manage your account, sign you in, secure your session, support
+                communications, and confirm sensitive requests (e.g., account deletion).<br />
+                <em>Legal basis:</em> Contract performance (Art. 6(1)(b)).
+            </p>
 
-                <li><strong>User preferences:</strong> language, notification settings (opt-in/opt-out),
-                    country/currency to
-                    display AliExpress prices for your region.<br />
-                    <em>Purpose:</em> customize your experience.<br />
-                    <em>Legal basis:</em> Contract performance / Legitimate interests (Art. 6(1)(f)), as applicable.
-                </li>
+            <hr class="divider" />
 
-                <li><strong>Diagnostics &amp; performance (Crashlytics and Analytics):</strong> technical information
-                    like
-                    Android version, device model, app version, crash logs, and some aggregated usage metrics.<br />
-                    <em>Purpose:</em> fix issues, improve stability, security, and quality. We do not use this for
-                    behavioral
-                    advertising and we do not collect precise location.<br />
-                    <em>Legal basis:</em> Legitimate interests (Art. 6(1)(f)). We do not currently provide an in-app
-                    toggle; you may
-                    object by contacting us and we will honor your request as far as practicable.
-                </li>
+            <p><strong>Parcel tracking numbers:</strong> the shipment numbers you add to view status and updates.<br />
+                <em>Purpose:</em> fetch and display your shipment status, and help you restore your list when changing
+                devices.<br />
+                <em>Legal basis:</em> Contract performance.
+            </p>
 
-                <li><strong>Push notification tokens (FCM):</strong><br />
-                    <em>Purpose:</em> send the notifications you enable (parcel progress / deals).<br />
-                    <em>Legal basis:</em> Consent (withdrawable at any time in the app or device settings).<br />
-                    <em>Your control:</em> You can withdraw consent at any time from the in-app settings or your device
-                    settings.
-                    We will stop sending notifications and <strong>delete your FCM token</strong> when you disable
-                    notifications
-                    or delete your account.
-                </li>
+            <hr class="divider" />
 
-                <li><strong>Advertising identifiers:</strong> We <strong>do not use</strong> the Android Advertising ID,
-                    and we do
-                    not link it to FCM or other features.</li>
+            <p><strong>User preferences:</strong> language, notification settings (opt-in/opt-out), country/currency to
+                display regional prices for AliExpress.<br />
+                <em>Purpose:</em> customize your experience.<br />
+                <em>Legal basis:</em> Contract performance / Legitimate interests (Art. 6(1)(f)), as applicable.
+            </p>
 
-                <li><strong>Support communications:</strong> content of your messages and your contact details.<br />
-                    <em>Purpose:</em> respond and improve the service.<br />
-                    <em>Legal basis:</em> Contract performance / Legitimate interests.
-                </li>
-            </ul>
+            <hr class="divider" />
+
+            <p><strong>Diagnostics &amp; performance (Firebase Crashlytics and Firebase Analytics):</strong><br />
+                Technical information such as Android version, device model, app version/build, crash logs and stack
+                traces, and aggregated usage metrics.
+                These diagnostics are <strong>essential for stability and safety and cannot be disabled from within the
+                    app</strong>.
+                We do <strong>not</strong> use this data for behavioral advertising and we do <strong>not</strong>
+                collect precise location.<br />
+                <em>Purpose:</em> detect/fix issues, improve stability, security, and quality.<br />
+                <em>Legal basis:</em> Legitimate interests (Art. 6(1)(f)). If you do not agree with these diagnostics,
+                please refrain from using the app; if you already have an account, you may delete it (see Section 6).
+                Previously collected crash data may remain for the limited retention period managed by Firebase.
+            </p>
+
+            <hr class="divider" />
+
+            <p><strong>Push notification tokens (FCM):</strong> a device token generated by Firebase Cloud
+                Messaging.<br />
+                <em>Purpose:</em> send the notifications you enable (e.g., parcel progress, deals).<br />
+                <em>Legal basis:</em> Consent (withdrawable at any time in the app or device settings).<br />
+                <em>Your control:</em> you can withdraw consent at any time in the in-app settings or your device
+                settings. We stop sending notifications and <strong>delete your FCM token</strong> when you disable
+                notifications or delete your account.
+            </p>
+
+            <hr class="divider" />
+
+            <p><strong>Advertising identifiers:</strong> We <strong>do not use</strong> the Android Advertising ID, and
+                we do <strong>not</strong> link it to FCM or other features.</p>
+
+            <hr class="divider" />
+
+            <p><strong>Support communications:</strong> the content of your messages and your contact details when you
+                contact us.<br />
+                <em>Purpose:</em> respond to your requests and improve the service.<br />
+                <em>Legal basis:</em> Contract performance / Legitimate interests.
+            </p>
 
             <p><strong>We do NOT collect:</strong> full legal name, postal address, phone number, payment information,
                 precise location, or access to camera/microphone/contacts for tracking purposes.</p>
+
+            <hr class="divider" />
+
+            <p><strong>Plain-language notice:</strong><br />
+                Using the app <strong>requires an email address</strong> for sign-in. If you prefer not to share this or
+                disagree with the data practices described above, you may choose not to use the app. If you already have
+                an account, you can <strong>delete it at any time</strong> (see <a href="#retention">Section 6</a>).
+            </p>
+
             <hr class="divider" />
         </section>
 
         <section id="how-we-use">
             <h2>3) How we use your data</h2>
+
+            <p><strong>Account &amp; authentication</strong><br />
+                We use your email, Firebase UID, and session tokens (JWT) to create and operate your account, sign you
+                in, and keep your session secure (e.g., preventing unauthorized access).<br />
+                <em>Legal basis:</em> Contract performance (Art. 6(1)(b)).
+            </p>
+
+            <p><strong>Parcel tracking</strong><br />
+                We process the tracking numbers you add to query shipping providers and show you the latest shipment
+                status. We keep your list available so you can restore it when moving to a new device.<br />
+                <em>Legal basis:</em> Contract performance.
+            </p>
+
+            <p><strong>Preferences &amp; personalization (non-sensitive)</strong><br />
+                We apply your language, notification opt-in/out, and country/currency settings to tailor the UI and
+                display regional prices where applicable.<br />
+                <em>Legal basis:</em> Contract performance / Legitimate interests (Art. 6(1)(f)).
+            </p>
+
+            <p><strong>Notifications (FCM)</strong><br />
+                If you opt in, we use your FCM device token to send the categories you enabled (e.g., parcel progress,
+                deals). You can turn notifications off at any time in the app or device settings; when you do, we stop
+                sending notifications and <strong>delete the FCM token</strong>. We do <strong>not</strong> link
+                notifications to the Android Advertising ID.<br />
+                <em>Legal basis:</em> Consent.
+            </p>
+
+            <p><strong>Diagnostics &amp; performance (Firebase Crashlytics &amp; Firebase Analytics)</strong><br />
+                We use crash reports, stack traces, app version/build, device model/OS version, and aggregated usage
+                metrics <strong>solely</strong> to detect/fix issues and improve stability and security. These
+                diagnostics are <strong>essential</strong> to the service and <strong>cannot be disabled from within the
+                    app</strong>. We do <strong>not</strong> use them for behavioral advertising and we do
+                <strong>not</strong> collect precise location.<br />
+                <strong>Where processed:</strong> exclusively in Firebase (we do not export raw analytics/crash events
+                to our own database; we view aggregated dashboards only).<br />
+                <em>Legal basis:</em> Legitimate interests (Art. 6(1)(f)). If you do not agree with these diagnostics,
+                please refrain from using the app; if you already have an account, you may delete it (see Section 6).
+            </p>
+
+            <p><strong>Affiliate links &amp; external content</strong><br />
+                We may show affiliate banners/links and product details fetched from external providers. Clicking a link
+                opens the third party’s site/app, where their terms and privacy policy apply. We do <strong>not</strong>
+                sell your data.
+            </p>
+
+            <h3>What we <strong>do not</strong> do</h3>
             <ul>
-                <li>Operate your account and sign you in.</li>
-                <li>Save and display the tracking numbers you add and retrieve the latest statuses.</li>
-                <li>Send the notifications you enabled (you can turn them off any time; the FCM token is deleted when
-                    you disable
-                    notifications or delete your account).</li>
-                <li>Diagnose crashes and improve performance (no behavioral ad targeting).</li>
-                <li>Show affiliate banners/links to external products; clicking them takes you to the third party’s
-                    policies.</li>
+                <li>We do <strong>not</strong> store or maintain server-side behavioral profiles (e.g., clickstream
+                    histories) tied to your identity.</li>
+                <li>We do <strong>not</strong> use behavioral or personalized ads.</li>
+                <li>We do <strong>not</strong> sell personal data or share it with data brokers.</li>
+                <li>We do <strong>not</strong> allow user-generated content or user-to-user communication inside the
+                    app.</li>
+                <li>We do <strong>not</strong> request precise location, camera, microphone, or contacts for tracking
+                    purposes.</li>
             </ul>
-            <p>We do not make automated decisions that produce legal effects concerning you.</p>
+
+            <h3>Limited operational logs (server-side)</h3>
+            <p>Our backend may generate <strong>temporary operational logs</strong> (e.g., error traces, request IDs,
+                abuse/rate-limit events) <strong>only</strong> to troubleshoot incidents, ensure security, and operate
+                the service. These logs are <strong>rotated and minimized</strong>, are <strong>not</strong> used to
+                build profiles, and are kept separate from Firebase analytics/crash data.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="sharing">
-            <h2>4) Sharing with trusted parties (processors/recipients)</h2>
+            <h2>4) Sharing with trusted parties (processors / recipients)</h2>
+
+            <p><em>Terminology:</em> <strong>Processors</strong> act on our behalf to provide app functionality.
+                <strong>Recipients (independent controllers)</strong> are third parties you visit or whose content you
+                access; their own policies apply.
+            </p>
+
             <ul>
-                <li><strong>Google Firebase:</strong> Authentication (Auth), Cloud Messaging (FCM), Crashlytics and
-                    Analytics.
-                    We share the minimum necessary to run these features.</li>
-                <li><strong>Shipment information providers:</strong> we only send the tracking number to retrieve the
-                    shipment status.</li>
-                <li><strong>Price/deals providers (e.g., AliExpress APIs):</strong> we use product identifiers to fetch
-                    details/prices.</li>
+                <li><strong>Google Firebase (Processor):</strong>
+                    <ul>
+                        <li><strong>Auth:</strong> processes your <strong>email</strong>, <strong>Firebase UID</strong>,
+                            and <strong>session tokens (JWT)</strong> to create and operate your account.</li>
+                        <li><strong>Cloud Messaging (FCM):</strong> stores your <strong>device token</strong> to deliver
+                            notifications you enable; the token is <strong>deleted</strong> when you disable
+                            notifications or delete your account.</li>
+                        <li><strong>Crashlytics &amp; Analytics:</strong> process <strong>crash reports/stack
+                                traces</strong>, <strong>app version/build</strong>, <strong>device model/OS</strong>,
+                            and <strong>aggregated usage metrics</strong> strictly for diagnostics and performance. We
+                            do <strong>not</strong> use this data for behavioral ads and we do <strong>not</strong>
+                            collect precise location. We do <strong>not</strong> export raw analytics/crash events to
+                            our own database.</li>
+                    </ul>
+                </li>
+                <li><strong>Shipment information providers (Recipients):</strong> we <strong>only</strong> send the
+                    <strong>tracking number</strong> (and courier code where needed) to retrieve shipment status. We
+                    <strong>do not</strong> send your email, name, or identifiers. Returned statuses are displayed and
+                    may be cached briefly for performance.
+                </li>
+                <li><strong>Price/deals providers (Recipients) — e.g., AliExpress APIs:</strong> we use <strong>product
+                        identifiers</strong> and regional parameters (e.g., country/currency) to fetch item
+                    details/prices. We <strong>do not</strong> send your personal data to these providers. If you open a
+                    product link, you are subject to the store’s policies.</li>
+                <li><strong>Affiliate links &amp; external stores (Recipients):</strong> we may show affiliate
+                    banners/links. Clicking a link opens the third party’s site/app. We <strong>do not</strong> share
+                    personal data for these links; the third party may receive standard referral parameters. Their terms
+                    and privacy policies apply.</li>
+                <li><strong>Legal &amp; safety disclosures:</strong> we may disclose information if required by law or
+                    to protect users, investigate abuse/fraud, or secure the service.</li>
             </ul>
-            <p><strong>We do not sell your data</strong> and we do not share it for behavioral advertising.</p>
+
+            <p><strong>We do not sell your data</strong> and we do <strong>not</strong> share it for behavioral
+                advertising or with data brokers.</p>
             <hr class="divider" />
         </section>
 
         <section id="ads">
             <h2>5) Ads &amp; affiliate links</h2>
-            <p>Trackili may display affiliate links/banners. We may earn a commission if you purchase via those links
-                <strong>at no extra cost to you</strong>. Prices/availability are determined by the third party; please
-                review
-                their policies and terms before purchasing.
+
+            <p><strong>No ad SDKs / no behavioral ads.</strong><br />
+                The app does <strong>not</strong> integrate third-party ad SDKs (e.g., AdMob) and does
+                <strong>not</strong> show personalized/behavioral advertising.
             </p>
+
+            <p><strong>Affiliate disclosures.</strong><br />
+                We may display <strong>affiliate banners/links</strong> to third-party products or stores. If you
+                purchase through these links, we may earn a commission <strong>at no additional cost to you</strong>.
+                Prices and availability are set by the third party; please verify the final price and terms at checkout.
+            </p>
+
+            <p><strong>Data sharing for affiliates.</strong><br />
+                We do <strong>not</strong> share your personal data (e.g., email, UID) with affiliate partners. Links
+                may include <strong>standard referral parameters</strong> so the partner can attribute a purchase. We do
+                <strong>not</strong> track your browsing on third-party sites/apps.
+            </p>
+
+            <p><strong>Third-party policies.</strong><br />
+                When you open an affiliate link, you are subject to the <strong>third party’s</strong> terms and privacy
+                policy. Please review them before purchasing.
+            </p>
+
+            <p><strong>Android Advertising ID.</strong><br />
+                We do <strong>not</strong> use the Android Advertising ID and do <strong>not</strong> link it to
+                notifications or affiliate content.
+            </p>
+
+            <p><strong>Changes.</strong><br />
+                If we later introduce an ad SDK or personalized ads, we will update this policy and our Google Play Data
+                Safety declarations before enabling such features.
+            </p>
+
             <hr class="divider" />
         </section>
 
         <section id="retention">
             <h2>6) Retention &amp; deletion</h2>
-            <ul>
-                <li><strong>Account, tracking numbers, preferences, and FCM token:</strong> kept while your account is
-                    active
-                    and deleted immediately when you delete your account or request deletion.</li>
-                <li><strong>Support messages:</strong> up to <strong>12 months</strong> from your last contact (or
-                    deleted upon request).</li>
-                <li><strong>Crashlytics/Analytics:</strong> crash data and metrics for an operationally necessary period
-                    (e.g., <strong>90–180 days</strong> for Crashlytics, and up to <strong>14 months</strong> for
-                    aggregated metrics
-                    where applicable).</li>
-                <li><strong>Automated backups (if any):</strong> removed as part of the deletion cycle and not used to
-                    restore
-                    individually deleted data.</li>
-            </ul>
-            <p><strong>Account &amp; data deletion:</strong><br />
-                In-app: <em>Settings → Delete Account</em> (immediate deletion from our operational systems).<br />
-                On the web (alternative): <a href="https://www.trackili.app/terms/delete-account.html"
-                    rel="noopener">https://www.trackili.app/terms/delete-account.html</a>
+
+            <p><strong>General principle.</strong><br />
+                We retain personal data <strong>only for as long as necessary</strong> to provide the service and
+                fulfill the purposes set out in this policy. When data is no longer needed, we delete it from our
+                operational systems or anonymize it.
             </p>
+
+            <p><strong>Account, tracking numbers, preferences, and FCM token.</strong><br />
+                Kept while your account is active. When you delete your account, we delete:
+            </p>
+            <ul>
+                <li>your account record (email, UID, display name),</li>
+                <li>your tracking numbers and preferences,</li>
+                <li>your FCM device token (so you no longer receive notifications).</li>
+            </ul>
+
+            <p><strong>Support messages.</strong><br />
+                Retained for up to <strong>12 months</strong> from your last contact (or deleted earlier upon request).
+            </p>
+
+            <p><strong>Diagnostics &amp; performance (Firebase Crashlytics / Firebase Analytics).</strong><br />
+                Crash reports, stack traces, app/device metadata, and aggregated usage metrics are <strong>stored by
+                    Firebase</strong> for a <strong>limited operational period</strong> under Firebase’s own retention
+                policies. These diagnostics are used solely for stability and performance and are <strong>not</strong>
+                exported to our own database. We do <strong>not</strong> control or extend Firebase’s retention periods.
+                Data already collected may remain until Firebase’s retention period expires.
+            </p>
+
+            <p><strong>Operational logs (server-side).</strong><br />
+                Our backend may create <strong>temporary, minimized logs</strong> (e.g., timestamps, error codes,
+                request IDs) strictly for troubleshooting, security, and abuse prevention. These logs are rotated on a
+                short cycle, kept separate from analytics/crash data, and are <strong>not</strong> used to build
+                behavioral profiles.
+            </p>
+
+            <p><strong>Backups.</strong><br />
+                If system backups exist, deleted items are removed through the <strong>routine backup rotation
+                    cycle</strong>. Backups are <strong>not</strong> used to restore individually deleted data.
+            </p>
+
+            <h3>Account &amp; data deletion</h3>
+            <ul>
+                <li><strong>In-app:</strong> <em>Settings → Delete Account</em> (removes your data from our operational
+                    systems without undue delay).</li>
+                <li><strong>Account deletion assistance:</strong> If you are unable to delete your account from within
+                    the app, you may submit a request via our support page: <a
+                        href="https://www.trackili.app/terms/delete-account.html"
+                        rel="noopener">https://www.trackili.app/terms/delete-account.html</a>.</li>
+                <li><strong>Scope:</strong> deleting your account removes your account data, tracking numbers,
+                    preferences, and FCM token from our operational systems. Diagnostics previously sent to Firebase may
+                    persist until Firebase’s retention period ends.</li>
+                <li><strong>Identity verification:</strong> we may request reasonable information to verify that the
+                    deletion request is made by the account owner.</li>
+            </ul>
+
             <hr class="divider" />
         </section>
 
         <section id="controls">
             <h2>7) Your choices &amp; controls</h2>
+
             <ul>
-                <li><strong>Notifications:</strong> turn parcel/deal notifications on/off in the app or in your device
-                    settings
-                    (<strong>we delete the FCM token when you disable notifications</strong>).</li>
-                <li><strong>Crashlytics/Analytics:</strong> used under legitimate interests to improve quality.
-                    <em>No in-app toggle currently</em>; you can <strong>object</strong> by contacting us and we will
-                    honor your
-                    request as far as practicable.
+                <li><strong>Notifications (FCM):</strong> you can turn parcel/deal notifications <strong>on or
+                        off</strong> at any time in the app or in your device settings. When you disable notifications
+                    or delete your account, we <strong>delete your FCM device token</strong> and pushes stop.</li>
+                <li><strong>Diagnostics &amp; performance (Crashlytics / Analytics):</strong> processed under
+                    <strong>legitimate interests</strong> to ensure stability, security, and quality. These diagnostics
+                    are <strong>essential</strong> and there is <strong>no in-app toggle</strong>. We do
+                    <strong>not</strong> use them for behavioral advertising. To <strong>object</strong> (Art. 21 GDPR),
+                    contact <a href="mailto:support@trackili.app">support@trackili.app</a>. Honoring an objection may
+                    require <strong>deactivation and deletion of the account</strong> (see Section 6).
                 </li>
-                <li><strong>Manage your data:</strong> you can add/edit/delete tracking numbers and update your display
-                    name
-                    in the app.</li>
+                <li><strong>Manage your data (in-app):</strong> add, <strong>edit</strong>, or <strong>delete</strong>
+                    the shipment numbers you save; set a custom label/name for shipments. <strong>Display
+                        name/username:</strong> set during registration and not editable at this time.</li>
+                <li><strong>Email requirement:</strong> an <strong>email address is required</strong> to create an
+                    account and sign in.</li>
             </ul>
+
             <hr class="divider" />
         </section>
 
         <section id="rights">
             <h2>8) Your rights (especially in the EEA/UK)</h2>
-            <p>Depending on your local law, you may have rights to <strong>access</strong>, <strong>rectify</strong>,
-                <strong>erase</strong>, <strong>restrict</strong>, <strong>object</strong> (especially to processing
-                based on
-                legitimate interests), <strong>portability</strong>, and <strong>withdraw consent</strong> without
-                affecting the
-                lawfulness of prior processing.
-            </p>
-            <p><strong>How to exercise:</strong> email <a href="mailto:contact@trackili.app">contact@trackili.app</a>
-                and we will respond within <strong>30 days</strong>. You also have the right to lodge a complaint with
-                your
-                <strong>data protection authority</strong>.
-            </p>
+
+            <p>If you are located in the EEA or the UK, you have the following rights under the GDPR/UK GDPR, subject to
+                legal limits and exemptions:</p>
+            <ul>
+                <li><strong>Access</strong></li>
+                <li><strong>Rectification</strong></li>
+                <li><strong>Erasure (“right to be forgotten”)</strong></li>
+                <li><strong>Restriction</strong></li>
+                <li><strong>Objection</strong> to processing based on <strong>legitimate interests</strong> (including
+                    diagnostics/analytics)</li>
+                <li><strong>Portability</strong></li>
+                <li><strong>Withdraw consent</strong> (e.g., push notifications)</li>
+                <li><strong>Complaint</strong> to your data protection authority</li>
+            </ul>
+
+            <p><strong>How to exercise your rights.</strong> Email <a
+                    href="mailto:support@trackili.app">support@trackili.app</a>. We normally respond <strong>within one
+                    month</strong> (extendable by up to two months for complex/multiple requests).</p>
+            <p><strong>Verification &amp; fees.</strong> We may verify your identity before acting. Requests are free
+                unless manifestly unfounded or excessive.</p>
+            <p><strong>Scope &amp; limitations.</strong> Rights are not absolute. Diagnostics sent to Firebase may
+                persist until Firebase’s retention period ends. Where feasible, we will inform relevant processors of
+                deletions or corrections.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="security">
             <h2>9) Security</h2>
-            <p>We apply appropriate technical and organizational measures (e.g., TLS in transit, least-privilege access
-                controls,
-                internal error reviews). No method is 100% secure, and we will provide notices as required by law in
-                case of a
-                relevant incident.</p>
+
+            <ul>
+                <li><strong>Trusted infrastructure (Firebase):</strong> core authentication, messaging, diagnostics, and
+                    analytics are processed within Google Firebase. We rely on platform-level security controls.</li>
+                <li><strong>Data minimization &amp; isolation:</strong> we collect only what is necessary; we do not
+                    maintain server-side behavioral profiles tied to your identity.</li>
+                <li><strong>Access control &amp; admin safeguards:</strong> least-privilege, MFA, periodic reviews.</li>
+                <li><strong>Secrets &amp; keys:</strong> stored securely and not embedded in the app or source.</li>
+                <li><strong>Vulnerability &amp; patch management:</strong> we monitor and apply updates; crash/error
+                    reviews improve stability/security.</li>
+                <li><strong>Operational logging (limited):</strong> minimal, temporary logs rotated regularly; separated
+                    from analytics/crash data; not used to profile.</li>
+                <li><strong>Processors &amp; safeguards:</strong> contracts and technical safeguards; see Section 10 for
+                    transfers.</li>
+            </ul>
+
+            <p><strong>Incident response.</strong> If we become aware of a breach affecting personal data, we will
+                notify affected users and regulators without undue delay where required by law.</p>
+            <p><strong>No absolute security.</strong> No method is 100% secure; we continually improve controls.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="transfers">
             <h2>10) International transfers</h2>
-            <p>Your data may be processed outside the EEA (e.g., via Firebase). Where applicable, we rely on
-                <strong>Standard Contractual Clauses (SCCs)</strong> and appropriate safeguards.
-            </p>
+
+            <p>Your data may be processed outside your country (including outside the EEA/UK) via our processors (e.g.,
+                Google Firebase).</p>
+            <p><strong>Transfer mechanisms (EEA/UK).</strong> Where required, we rely on <strong>Standard Contractual
+                    Clauses (SCCs)</strong> (and UK Addendum/IDTA) plus additional safeguards. Adequacy decisions may
+                apply for specific destinations.</p>
+            <p><strong>Firebase as processor.</strong> Firebase processes authentication, messaging, diagnostics, and
+                analytics; we do not export raw analytics/crash events to our own databases.</p>
+            <p><strong>Third-party recipients (independent controllers).</strong> When you follow links to carriers or
+                stores, those third parties act under their own policies and jurisdictions.</p>
+            <p><strong>Copies and further information.</strong> You may contact <a
+                    href="mailto:support@trackili.app">support@trackili.app</a> to request information about transfer
+                safeguards (including SCCs) subject to confidentiality/legal limits.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="children">
             <h2>11) Children</h2>
-            <p>The service is <strong>not directed to children under 13</strong>, or below the <strong>local age of
-                    consent for
-                    online services</strong> (up to <strong>16</strong> in some countries). If we learn we collected a
-                child’s data
-                unintentionally, we will delete it upon notice.</p>
+
+            <p><strong>Service intent.</strong> Trackili is intended for individuals who have the legal capacity to shop
+                online and manage shipments. The service is <strong>not directed to children</strong>.</p>
+            <p><strong>Age thresholds.</strong> Users under 13 (or below the local age of digital consent, 13–16 in some
+                countries) must not create an account without verifiable parental/guardian consent.</p>
+            <p><strong>No knowing collection.</strong> We do not knowingly collect personal data from children and we do
+                not show behavioral ads.</p>
+            <p><strong>Parental/guardian requests.</strong> Contact <a
+                    href="mailto:support@trackili.app">support@trackili.app</a> to request account/data deletion (see
+                Section 6).</p>
+            <p><strong>Enforcement.</strong> Where we determine an account is used by a child without required consent,
+                we may restrict or delete it consistent with legal obligations.</p>
+            <p><strong>Legal references.</strong> We endeavor to comply with COPPA (where applicable) and GDPR/UK GDPR
+                Article 8.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="cookies">
             <h2>12) Cookies (website)</h2>
-            <p>Our website may use essential cookies (e.g., language/security). We do not use behavioral advertising
-                cookies.
-                If we add web analytics in the EEA, we will update this policy accordingly.</p>
+
+            <p><strong>Scope.</strong> Cookies apply to our <strong>website</strong> only. The mobile app does
+                <strong>not</strong> use web cookies.
+            </p>
+            <p><strong>What we use today.</strong> Strictly necessary cookies (short-lived session/security and
+                language/preference). No cross-site tracking.</p>
+            <p><strong>What we do not use.</strong> No behavioral advertising cookies or third-party ad SDKs on the
+                website.</p>
+            <p><strong>Analytics (not currently enabled in the EEA/UK).</strong> If introduced, we will obtain prior
+                consent where required, use privacy-preserving configurations, and update this policy and Data Safety
+                declarations.</p>
+            <p><strong>Typical lifetimes.</strong> Session-based or short-lived; preference cookies may persist up to 12
+                months.</p>
+            <p><strong>Your controls.</strong> You can block/delete cookies via your browser; blocking strictly
+                necessary cookies may affect site functionality.</p>
+            <p><strong>Third-party content.</strong> We avoid third-party embeds; when you follow links to carriers or
+                stores, their cookie practices apply.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="links">
             <h2>13) External links</h2>
-            <p>When you navigate to shipping companies or stores, their own policies and terms apply. Please review them
-                before
-                sharing any information.</p>
+
+            <p>Our app and website may include links or redirects to third-party services (e.g., shipping carriers,
+                online stores, affiliate destinations). These third parties act as independent controllers and process
+                personal data under their own privacy policies and terms.</p>
+            <p><strong>No control / no endorsement.</strong> We do not control or endorse third-party sites, their
+                content, availability, or security practices.</p>
+            <p><strong>Data sent when following a link.</strong> Opening a link may disclose limited technical
+                information (e.g., referrer or affiliate parameters). We do not transmit your email, Firebase UID, or
+                account identifiers when you simply click a link.</p>
+            <p><strong>Your responsibility.</strong> Review third-party privacy notices, cookie notices, and terms of
+                sale before sharing information or purchasing.</p>
+            <p><strong>Issues with third-party services.</strong> Contact the third party directly for orders, shipping,
+                refunds, or data handling issues. You may also inform us; we may remove or update links at our
+                discretion.</p>
+            <p><strong>Security notice.</strong> Be cautious of phishing or look-alike domains. If you suspect a
+                malicious link, avoid proceeding and notify us at <a
+                    href="mailto:support@trackili.app">support@trackili.app</a>.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="disclaimer">
             <h2>14) Disclaimer (important)</h2>
-            <p>We are not a shipping company and we do not generate tracking data; we display it as provided by external
-                services.
-                Updates may be delayed or differ across systems. For shipment issues, please contact your carrier
-                directly.</p>
-            <p>For AliExpress data: we display prices/deals as received from external providers and they may not always
-                be accurate;
-                <strong>verify the final price and seller terms on the store before purchasing</strong>. We are not
-                responsible for
-                purchase decisions based on outdated information.
-            </p>
+
+            <p><strong>Nature of the service.</strong> Trackili is <strong>not</strong> a shipping carrier, logistics
+                provider, payment processor, or online store. We do <strong>not</strong> generate tracking data and we
+                do <strong>not</strong> fulfill, ship, or sell products. The app aggregates and displays information
+                obtained from external providers for your convenience.</p>
+            <p><strong>Source &amp; accuracy of information.</strong> Shipment statuses, product details, prices, and
+                deals are provided by third-party services and may be delayed, incomplete, or inconsistent across
+                systems. Information is shown “as is / as available.” We do not guarantee accuracy, completeness, or
+                timeliness, and we may cache data briefly for performance.</p>
+            <p><strong>Prices, availability, and terms.</strong> Prices, taxes, shipping costs, availability, delivery
+                estimates, and seller terms are set by the third party and may change at any time without notice. Before
+                purchasing, verify the final price, taxes/fees, shipping, and seller terms at checkout.</p>
+            <p><strong>No endorsement / no party to transactions.</strong> Links (including affiliate links) are for
+                convenience only. We do not endorse sellers/products and we are not a party to your transactions. For
+                order/refund/warranty/shipping issues, contact the merchant/seller or carrier directly.</p>
+            <p><strong>Service availability &amp; dependencies.</strong> Our service depends on third-party APIs and
+                infrastructure (e.g., carriers, marketplaces, Firebase). We do not warrant uninterrupted availability
+                and may modify, suspend, or discontinue features at any time.</p>
+            <p><strong>Limitation of liability.</strong> To the maximum extent permitted by law, we are not liable for
+                indirect, incidental, special, consequential, or punitive damages, or for loss arising from reliance on
+                third-party information, service interruptions, delays, customs/duty assessments, or issues outside our
+                reasonable control. Nothing limits liability where it cannot be limited under applicable law (e.g.,
+                fraud).</p>
+            <p><strong>Your responsibility.</strong> Always verify shipment status with your carrier and final
+                price/terms with the merchant before purchasing.</p>
+            <p><strong>Consumer rights.</strong> This disclaimer does not affect any non-excludable consumer rights you
+                may have under applicable law.</p>
+
             <hr class="divider" />
         </section>
 
         <section id="changes">
             <h2>15) Changes to this policy</h2>
             <p>We may update this policy. We will show the “Last updated” date at the top and may send an in-app notice
-                for
-                material changes. Your continued use of Trackili means you accept the updated version.</p>
+                for material changes. Your continued use of Trackili means you accept the updated version.</p>
             <hr class="divider" />
         </section>
 
         <section id="contact">
             <h2>16) Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:contact@trackili.app">contact@trackili.app</a><br />
+            <p><strong>Email:</strong> <a href="mailto:support@trackili.app">support@trackili.app</a><br />
                 <strong>Policy page:</strong> <a href="https://www.trackili.app/terms/privacy.html"
                     rel="noopener">https://www.trackili.app/terms/privacy.html</a>
             </p>
@@ -334,43 +605,67 @@
         <section id="appendix">
             <h2>Appendix — Google Play Data Safety summary (for transparency)</h2>
 
-            <h3>Data collected:</h3>
+            <h3>Data collected</h3>
             <ul>
-                <li><strong>Personal info:</strong> email (optional), display name (optional), Firebase UID.</li>
-                <li><strong>App activity / app info and performance:</strong> crash logs, diagnostics, and basic usage
-                    metrics
-                    (no precise location).</li>
-                <li><strong>Device or other IDs:</strong> <strong>FCM token</strong> (for notifications).</li>
-                <li><strong>User content:</strong> parcel tracking numbers you add.</li>
-                <li><strong>Preferences:</strong> language, country/currency, notification opt-in.</li>
+                <li><strong>Personal info:</strong> <strong>email (required)</strong>, <strong>display name/username
+                        (required)</strong>, <strong>Firebase UID</strong>. <em>Profile photo (Google Sign-In
+                        only):</em> URL provided by Google to populate the in-app profile.</li>
+                <li><strong>App info &amp; performance / App activity:</strong> crash logs and stack traces, device/OS,
+                    app version/build, and <strong>aggregated</strong> usage metrics (no precise location).</li>
+                <li><strong>Device or other IDs:</strong> <strong>FCM device token</strong> (push notifications).</li>
+                <li><strong>User content:</strong> parcel <strong>tracking numbers</strong> you add.</li>
+                <li><strong>Preferences:</strong> language, country/currency, notification opt-in/out.</li>
             </ul>
 
-            <h3>Purposes:</h3>
+            <h3>Purposes</h3>
             <ul>
-                <li><strong>App functionality:</strong> account, parcel tracking, preferences.</li>
-                <li><strong>Notifications:</strong> only if enabled (consent).</li>
-                <li><strong>Analytics/diagnostics &amp; performance:</strong> improve stability and quality (legitimate
-                    interests).</li>
+                <li><strong>App functionality:</strong> account/authentication, parcel tracking, preferences.</li>
+                <li><strong>Notifications (consent):</strong> parcel progress / deals (when enabled).</li>
+                <li><strong>Diagnostics &amp; performance (legitimate interests):</strong> stability, security, quality
+                    (Crashlytics/Analytics; <strong>not</strong> for behavioral ads).</li>
                 <li><strong>Developer communications:</strong> support and responding to your requests.</li>
+                <li><em>(If applicable)</em> <strong>Fraud prevention &amp; security:</strong> rate-limit/abuse
+                    prevention in limited operational logs.</li>
             </ul>
 
-            <h3>Data sharing &amp; selling:</h3>
+            <h3>Data sharing &amp; selling</h3>
             <ul>
-                <li>Shared only with <strong>processors</strong> necessary to provide the service (Firebase;
-                    shipment/price providers).</li>
-                <li><strong>Not sold</strong> and <strong>not used for behavioral advertising</strong>.</li>
-            </ul>
-
-            <h3>Security:</h3>
-            <ul>
-                <li>Encrypted in transit (TLS). Access controlled internally. Invalid FCM tokens are removed.</li>
-            </ul>
-
-            <h3>User control &amp; deletion:</h3>
-            <ul>
-                <li>Disable notifications in app/device settings (<strong>FCM token deleted</strong>).</li>
-                <li>Delete account in-app; data removed from operational systems and scheduled for removal from backups.
+                <li><strong>Not sold.</strong></li>
+                <li><strong>Processors (not “sharing” for Data Safety):</strong> <strong>Firebase</strong> (Auth, FCM,
+                    Crashlytics, Analytics) processes data on our behalf.</li>
+                <li><strong>Limited sharing for functionality (Recipients):</strong>
+                    <ul>
+                        <li>To <strong>carriers/track providers:</strong> we send <strong>tracking numbers</strong> (and
+                            courier code if needed) <strong>only</strong> to retrieve status (no email/UID).</li>
+                        <li>To <strong>price/deals providers:</strong> we send <strong>product identifiers</strong> and
+                            region parameters to fetch details/prices (no personal identifiers).</li>
+                    </ul>
                 </li>
+                <li><strong>No sharing for behavioral advertising</strong> and <strong>no data brokers</strong>.</li>
+            </ul>
+
+            <h3>Security</h3>
+            <ul>
+                <li>Data is <strong>encrypted in transit</strong>; access is least-privilege.</li>
+                <li>Invalid/disabled <strong>FCM tokens are deleted</strong>.</li>
+                <li>We do <strong>not</strong> maintain server-side behavioral profiles tied to your identity.</li>
+            </ul>
+
+            <h3>User control &amp; deletion</h3>
+            <ul>
+                <li><strong>Notifications:</strong> disable in app/device settings → <strong>FCM token deleted</strong>
+                    and pushes stop.</li>
+                <li><strong>Account/data deletion:</strong> in-app <strong>Settings → Delete Account</strong> (or via
+                    our web page). Account data, tracking numbers, preferences, and FCM token are removed from
+                    operational systems; diagnostics already sent to Firebase persist until Firebase’s retention period
+                    ends.</li>
+            </ul>
+
+            <h3>Additional disclosures</h3>
+            <ul>
+                <li><strong>Android Advertising ID:</strong> <strong>not used</strong> and <strong>not linked</strong>
+                    to notifications or affiliate content.</li>
+                <li><strong>Children:</strong> service not directed to children; see Section 11.</li>
             </ul>
         </section>
     </main>
